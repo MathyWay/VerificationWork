@@ -1,4 +1,6 @@
-﻿string[] array = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries)
+﻿Console.Write("Введите строковые элементы массива через пробел:");
+
+string[] array = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries)
                                   .Where<string>(str => str.Length <= 3).ToArray();
 foreach(string? item in array)
 {
