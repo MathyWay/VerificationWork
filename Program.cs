@@ -1,9 +1,7 @@
-﻿string[] array = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
-int i = 0;
-int count = 0;
-while (i < array.Length)
+﻿string[] array = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                                    .Where<string>(str => str.Length <= 3).ToArray();
+foreach(string item in array)
 {
-    if(array[i].Length <= 3) count++;
-    i++;
+    Console.Write($"{item} ");
 }
-Console.WriteLine($"Количество элементов равно {count}");
+Console.WriteLine();
